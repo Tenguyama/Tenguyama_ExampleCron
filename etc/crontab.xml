@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="default">
+        <job name="tenguyama_cronexample_cron_reindexmodel"
+             instance="Tenguyama\CronExample\Cron\ReindexModel"
+             method="execute">
+            <schedule>* * * * *</schedule><!-- заглушка, міняю через конфіг сторінку -->
+<!--            <schedule><config_path>tenguyama_cronexample/general/cron_time</config_path></schedule>-->
+        </job>
+    </group>
+</config>

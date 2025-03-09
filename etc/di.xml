@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework/ObjectManager/etc/config.xsd">
+    <type name="Tenguyama\CronExample\Cron\ReindexModel">
+        <arguments>
+            <argument name="indexerFactory" xsi:type="object">Magento\Indexer\Model\IndexerFactory</argument>
+            <argument name="indexerCollectionFactory" xsi:type="object">Magento\Indexer\Model\Indexer\CollectionFactory</argument>
+        </arguments>
+    </type>
+    <type name="Tenguyama\CronExample\Model\Config\CronConfig">
+        <arguments>
+            <argument name="timezone" xsi:type="object">Magento\Framework\Stdlib\DateTime\TimezoneInterface</argument>
+        </arguments>
+    </type>
+</config>

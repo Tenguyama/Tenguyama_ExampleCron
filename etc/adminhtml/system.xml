@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="tenguyama" translate="label" sortOrder="100">
+            <label>Tenguyama</label>
+        </tab>
+        <section id="tenguyama_cronexample" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="0">
+            <label>Cron Example</label>
+            <tab>tenguyama</tab>
+            <resource>Tenguyama_CronExample::config</resource>
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                <label>General Settings</label>
+
+                <!-- Поле для частоти cron -->
+                <field id="frequency" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Frequency</label>
+                    <source_model>Magento\Cron\Model\Config\Source\Frequency</source_model>
+                    <backend_model>Tenguyama\CronExample\Model\Config\CronConfig</backend_model>
+                </field>
+
+                <!-- Поле для часу cron -->
+                <field id="cron_time" translate="label" type="time" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cron Execution Time</label>
+                    <comment>Enter cron schedule time (e.g., 03:00 for daily at 03:00)</comment>
+                    <validate>required-entry</validate>
+                    <backend_model>Tenguyama\CronExample\Model\Config\CronConfig</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
