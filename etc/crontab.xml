@@ -5,8 +5,7 @@
         <job name="tenguyama_cronexample_cron_reindexmodel"
              instance="Tenguyama\CronExample\Cron\ReindexModel"
              method="execute">
-            <schedule>* * * * *</schedule><!-- заглушка, міняю через конфіг сторінку -->
-<!--            <schedule><config_path>tenguyama_cronexample/general/cron_time</config_path></schedule>-->
+            <config_path>crontab/default/jobs/tenguyama_cronexample_cron_reindexmodel/schedule/cron_expr</config_path>
         </job>
     </group>
 </config>

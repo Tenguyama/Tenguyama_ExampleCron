@@ -60,8 +60,6 @@ class CronConfig extends Value
             $timezone = $this->_timezone->getConfigTimezone();
             $logger->info('Timezone: ' . $timezone);
             $dateTime = new \DateTime($cronTime, new \DateTimeZone($timezone));
-//          Тут перед розділенням годин і хвилин, та подальшим збереженням хотілося б переводити таймзону в +0,
-//          але я так і не зрозумів чи в стеку тасок воно переродить час з +0 в таймзону сервера, поки відкомічусь так
             $minutes = (int)$dateTime->format('i');
             $hours = (int)$dateTime->format('H');
 
